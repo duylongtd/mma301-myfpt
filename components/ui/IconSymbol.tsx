@@ -13,6 +13,13 @@ const MAPPING = {
   'paperplane.fill': 'send',
   'chevron.left.forwardslash.chevron.right': 'code',
   'chevron.right': 'chevron-right',
+  'tray.fill': 'list-alt',
+  'bitcoinsign.circle.fill': 'money',
+  'gamecontroller.fill': 'games',
+  'folder.fill.badge.person.crop': 'person',
+  'doc.text.magnifyingglass': 'search',
+  'square.grid.2x2': 'grid-on',
+  'book.fill': 'book',
 } as Partial<
   Record<
     import('expo-symbols').SymbolViewProps['name'],
