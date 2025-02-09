@@ -1,13 +1,17 @@
-import { MaterialIcons } from "@expo/vector-icons";
 import { StyleSheet, TextInput, View } from "react-native";
 import { IconSymbol } from "../ui/IconSymbol";
 
-const SearchBar = () => {
+interface SearchBarProps {
+  onSearch: (text: string) => void;
+}
+
+const SearchBar = ({onSearch}: SearchBarProps) => {
   return (
     <View style={{ flexDirection: "row", width: "100%", alignItems: "center" }}>
       <View style={styles.container}>
         <IconSymbol name="doc.text.magnifyingglass" size={24} color="#B5B2B5" />
         <TextInput
+          onChangeText={onSearch}
           style={styles.btn}
           placeholder="Type feature's name"
           underlineColorAndroid="transparent" // Removes the underline on Android
